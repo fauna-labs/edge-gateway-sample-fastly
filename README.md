@@ -20,8 +20,8 @@ Example "Edge API Gateway" using Compute@Edge. In this sample, we implement `GET
 > 🛑 Compute @ Edge is not a default feature and must be enabled on the back-end. 
 > Contact Fastly to have this feature enabled in your account.
 
-### 1. Create a Wasm service:
-* [Sign in](https://manage.fastly.com/auth/sign-in) to Fastly. Click [Create service] and choose **Wasm**. 
+### 1. Create a Compute service:
+* [Sign in](https://manage.fastly.com/auth/sign-in) to Fastly. Click [Create service] and choose **Compute**. 
 * Navigate to **Origins > Hosts**. In the empty field), enter the *Hostname or IPv4 addres for the backend...*.
   Use one of these values depending on which Fauna 
   [Region Group](https://docs.fauna.com/fauna/current/learn/understanding/region_groups) 
