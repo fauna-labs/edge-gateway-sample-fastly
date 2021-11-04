@@ -81,6 +81,8 @@ Configure these settings:
 
 ## Next steps
 
-At this point, `GET`, `PUT` and `POST` `/users` should be live but you still need to deploy the resolvers (Fauna
-User Defined Functions, UDFs) on Fauna. Hop over to [this project](https://github.com/fauna-labs/vue-fauna-edge-api) to complete the Fauna setup.
-
+At this point, `GET`, `PUT` and `POST` `/users` should be live but you still need to deploy the resolvers 
+(Fauna User Defined Functions, UDFs) on Fauna. Hop over to 
+[this project](https://github.com/fauna-labs/vue-fauna-edge-api#1-create-fauna-resources)
+and complete the steps **1. Create Fauna Resources** and **2. Setup External Authentication with Auth0**
+to finish the setup.
