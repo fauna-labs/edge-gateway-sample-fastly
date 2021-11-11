@@ -8,13 +8,16 @@
   },
   "author": "zee.khoo@fauna.com",
   "license": "MIT-0",
+  "engines": {
+    "node": "^16"
+  },  
   "devDependencies": {
-    "core-js": "^3.15.2",
-    "webpack": "^5.10.0",
-    "webpack-cli": "^4.2.0"
+    "core-js": "^3.19.1",
+    "webpack": "^5.64.0",
+    "webpack-cli": "^4.9.1"
   },
   "dependencies": {
-    "@fastly/js-compute": "^0.2.0"
+    "@fastly/js-compute": "^0.2.1"
   },
   "scripts": {
     "prebuild": "webpack",

@@ -22,7 +22,8 @@ Example "Edge API Gateway" using Compute@Edge. In this sample, we implement `GET
 
 ### 1. Create a Compute service:
 * [Sign in](https://manage.fastly.com/auth/sign-in) to Fastly. Click [Create service] and choose **Compute**. 
-* Navigate to **Origins > Hosts**. In the empty field), enter the *Hostname or IPv4 addres for the backend...*.
+* Navigate to **Origins > Hosts**. In the empty field, provide a value for the
+  *Hostname or IPv4 addres for the backend...*.
   Use one of these values depending on which Fauna 
   [Region Group](https://docs.fauna.com/fauna/current/learn/understanding/region_groups) 
   your database is in:
@@ -33,9 +34,10 @@ Example "Edge API Gateway" using Compute@Edge. In this sample, we implement `GET
   | United States (US) | `db.us.fauna.com`           |
   | Europe (EU)        | `db.eu.fauna.com`           |
 
-* Change the default name of the host to **`host_fauna`**.
+* Save the above. You'll notice a default name created for this entry. e.g. *Host 1*. 
+  Change this default name to **`host_fauna`**.
 * Navigate to **Dictionaries** and click [Create your first dictionary]. Give it a name, e.g. `client_serverles_kv`
-  * When the screen updates, click [Add item]. Set:
+  * When the screen updates, click [Add item] to add the following value:
     * Key = **host_fauna**
     * Value = *<<same value as used for Hostname in the previous step. e.g. `db.eu.fauna.com`>>*
 * Find the **ID** of this service at the top of the screen. Copy it and edit in `fastly.toml` with its value:
@@ -77,7 +79,7 @@ Configure these settings:
   ```
   fastly compute deploy
   ```
-  When prompted to provide a domain, click Enter to accept the generated value. Wait a few seconds for the service to deploy. You should see the progress on the terminal.
+  ℹ️ When prompted to provide a domain, click Enter to accept the generated value. Wait a few seconds for the service to deploy. You should see the progress on the terminal.
 
 ## Next steps
 
