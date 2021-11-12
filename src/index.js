@@ -70,24 +70,6 @@ async function handleRequest(event) {
     });
   }
 
-  if (method == "GET" && pathname == "/geo") {
-    let clientGeo = {};
-    try {
-      clientGeo = event.client.geo;
-      console.log(`clientGeo: ${JSON.stringify(clientGeo, null, 2)}`);
-    } catch (e) {
-      console.log(`there was a problem with event.client.geo: ${e}`);
-      clientGeo = { error: `${e}` }
-    }
-    return new Response(
-      JSON.stringify({
-        geo: clientGeo
-      }), {
-      headers: { "content-type": "application/json;charset=UTF-8" },
-      status: 200
-    });
-  }
-
   // POST /users
   if (method == "POST" && pathname == "/users") {
     try {
