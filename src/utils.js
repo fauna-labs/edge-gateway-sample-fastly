@@ -58,14 +58,14 @@ export function resolveBackend(request) {
 
     const dict = new Dictionary('client_serverless_kv');
     backend = 'host_fauna';
-    backendUrl = `https://${dict.get(backend)}`;
+    backendUrl = `https://${dict.get(backend)}`;  
   } catch (e) {
-    console.log(`Error resolving backend: ${e}`);
+    backendUrl = 'https://db.eu.fauna.com';
+    console.log(`Error resolving backend: ${e}. Defaulting backendUrl to ${backendUrl}`);
     error = e;
   }
 
   if (bearerToken) {
-    backendUrl = 'https://db.eu.fauna.com';
     return { backend, backendUrl, bearerToken };
   } else {
     throw error;
