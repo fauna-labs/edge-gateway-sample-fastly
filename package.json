@@ -10,18 +10,18 @@
   "license": "MIT-0",
   "engines": {
     "node": "^16"
-  },  
+  },
   "devDependencies": {
     "core-js": "^3.19.1",
     "webpack": "^5.64.0",
     "webpack-cli": "^4.9.1"
   },
   "dependencies": {
-    "@fastly/js-compute": "^0.2.1"
+    "@fastly/js-compute": "^0.5.3"
   },
   "scripts": {
     "prebuild": "webpack",
-    "build": "js-compute-runtime --skip-pkg bin/index.js bin/main.wasm",
+    "build": "js-compute-runtime bin/index.js bin/main.wasm",
     "deploy": "npm run build && fastly compute deploy"
   }
 }
